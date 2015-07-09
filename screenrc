@@ -1,0 +1,20 @@
+# make the shell in every window as your login shell
+#shell -$SHELL
+
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %C%a "
+
+#scroll bars?
+#termcapinfo xterm* ti@:te@
+
+# increase scrollback buffer from default of 100
+defscrollback 5000
+
+# Default screens
+screen -t home  0
+screen -t shell1        1
+screen -t shell2        2
+screen -t top   8 top
+screen -t system.log    9 tail -f /var/log/system.log
+select 0

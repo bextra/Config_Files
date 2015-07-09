@@ -1,0 +1,1 @@
+export VERSIONER_PERL_PREFER_32_BIT=no
